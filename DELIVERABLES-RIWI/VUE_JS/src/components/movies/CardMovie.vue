@@ -1,5 +1,5 @@
 <template>
-  <div class="cad-movie">
+  <div class="cad-movie" :id="props.id">
     <h3>{{ props.title }}</h3>
     <img :src="props.poster" :alt="props.title">
     <p>
@@ -26,25 +26,33 @@ interface IProps{
 }
 
 const props = defineProps<IProps>()
+
 </script>
 
 
 <style scoped lang="scss">
 
 .cad-movie{
-  height: 100%;
+  height: 500px;
   width: 300px;
   background: $secondary;
   padding: 10px;
   text-align: center;
   border: 2px solid $primary;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
-  .title-card {
-    color: $white;
+  h3{
+    width: 260px;
+    height: 30px;
+    color: aliceblue;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; 
+  
   }
 
   p {

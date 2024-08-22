@@ -33,6 +33,7 @@
     listMovies.value = response.data.Search;
     
   }
+
 </script>
 
 
